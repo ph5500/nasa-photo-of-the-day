@@ -19,14 +19,20 @@ export default function ApiContent() {
     return (
 
         <div className="container">
-            <button onClick={() => setPhotos('')}>Photo of the Day</button>
+            {/* <button onClick={() => setPhotos('')}>Photo of the Day</button> */}
 
        
                 
-            
-                <img src = {photos.hdurl} alt ="pics"/>
-            {/* {console.log(photos)} */}
                 
+                <img src = {photos.hdurl} alt ="pics"/>
+
+                <info
+                 title = {photos.title}/>
+                 date = {photos.date}/>
+                 explanation = {photos.explanation}/>
+                 copyright = {photos.copyright}
+            {console.log(photos)}
+               /> 
 
                 
 
