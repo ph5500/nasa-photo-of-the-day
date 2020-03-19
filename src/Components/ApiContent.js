@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import CardContent from "./CardContent";
+import styled from "styled-components";
 
 export default function ApiContent() {
     const [photos, setPhotos] = useState({});
@@ -18,19 +19,20 @@ export default function ApiContent() {
     }, []);
     return (
 
-        <div className="container">
+        <Container>
             {/* <button onClick={() => setPhotos('')}>Photo of the Day</button> */}
 
        
                 
-                
+      
                 <img src = {photos.hdurl} alt ="pics"/>
-
+        <Body>
                 <info
                  title = {photos.title}/>
                  <h2>{photos.date}</h2>
                  <p>{photos.explanation}</p>
                  <p>{photos.copyright}</p>
+                 </Body>
                  {/* copyright = {photos.copyright} */}
             {/* {console.log(photos)} */}
                
@@ -38,7 +40,9 @@ export default function ApiContent() {
                 
 
           
-        </div>
+        </Container>
+
+
 
 
 
@@ -57,4 +61,30 @@ export default function ApiContent() {
     //     </div>
 
 }
+
+
+
+
+
+const Container = styled.div`
+background-color: #D8BFD8;
+        color: white;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+       
+        `;
+
+
+        const Body = styled.body`
+
+        border:solid black 40px;
+        border-bottom-color:#ffe;
+        border-left-color:#eed;
+        border-right-color:#eed;
+        border-top-color:#ccb;
+        color: black;
+        background-color: #808088;
+
+
+`;
+    
 
