@@ -11,10 +11,7 @@ function App() {
     <div className="App">
       <h1> Photo of the Day!</h1>
 
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+
       <ApiContent />
     </div>
   );

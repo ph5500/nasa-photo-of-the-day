@@ -28,11 +28,12 @@ export default function ApiContent() {
 
                 <info
                  title = {photos.title}/>
-                 date = {photos.date}/>
-                 explanation = {photos.explanation}/>
-                 copyright = {photos.copyright}
-            {console.log(photos)}
-               /> 
+                 <h2>{photos.date}</h2>
+                 <p>{photos.explanation}</p>
+                 <p>{photos.copyright}</p>
+                 {/* copyright = {photos.copyright} */}
+            {/* {console.log(photos)} */}
+               
 
                 
 
